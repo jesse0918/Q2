@@ -23,8 +23,13 @@ class MyGreeter_Client_Test extends TestCase
 
     public function test_getGreeting()
     {
-        $this->assertTrue(
-            strlen($this->greeter->getGreeting()) > 0
-        );
+    		for($i= 0 ;$i < 100; $i++)
+    		{
+    			
+    			$this->assertTrue(
+            strlen($this->greeter->getGreeting(rand(0, 24))) > 0
+        	);
+    		}
+        
     }
 }

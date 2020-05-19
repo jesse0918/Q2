@@ -24,11 +24,11 @@ class Client
 		/*
 		 *	@desc : greeter
 		 */
-		public static function getGreeting()
+		public static function getGreeting($date_time = null)
 		{
 				$return_info = null;
 				
-				$date_time = intval(date('H'));
+				if($date_time === null) $date_time = intval(date('H'));
 
 				switch(true)
 				{
@@ -48,7 +48,7 @@ class Client
 								$return_info = "It is a wrong time.";
 								break;
 				}
-				
+
 				return $return_info;
 		}
 }
